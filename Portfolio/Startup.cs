@@ -38,5 +38,15 @@ namespace Portfolio
                 });
             });
         }
+
+        // Added for testing Dependency Injections
+        public Startup(IWebHostEnvironment env)
+        {
+            // run this in the debugger, and inspect the "env" object! You can use this object to tell you 
+            // the root path of your application, for the purposes of reading from local files, and for            
+            // checking environment variables - such as if you are running in Development or Production 
+            Console.WriteLine(env.ContentRootPath);
+            Console.WriteLine(env.IsDevelopment());
+        }
     }
 }
